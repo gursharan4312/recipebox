@@ -17,7 +17,7 @@ a{
   border-radius: 5px;
   background: #8395A7;
   width: 80%;
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 10px;
 }
 .recipeBox{
@@ -34,4 +34,13 @@ a{
 .recipeBox ul li:hover{
 cursor: pointer;
 background: #DAE0E2;
+}
+
+.previewBox h2{
+  padding: 10px;
+}
+.previewBox .content{
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px;
 }

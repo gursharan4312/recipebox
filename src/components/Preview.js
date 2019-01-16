@@ -4,7 +4,13 @@ class Preview extends Component{
 
   render(){
     return(
-      <h1>This is Preview Page</h1>
+      <div className="previewBox innerContainer">
+        <div><h2 id="recipeName"></h2></div>
+        <div className="content">
+          <div id="ingredients"></div>
+          <div id="description"></div>
+        </div>
+      </div>
     )
   }
 }
