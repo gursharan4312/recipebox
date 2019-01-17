@@ -50,6 +50,7 @@ constructor(){
   componentDidMount(){
     this.showPreview(1);
   }
+
   render(){
     return(
       <div className="container">
@@ -58,12 +59,11 @@ constructor(){
       <Route path="/" render={()=>(
         <React.Fragment>
           <Recipes recipes={ this.state.recipes} showPreview={this.showPreview}/>
-          <Preview recipes={ this.state.recipes} />
+          <Preview recipes={ this.state.recipes}/>
         </React.Fragment>
       )}/>
-      <Route path="/addrecipe" component={AddRecipe} />
-
       </div>
+      <Route path="/addrecipe" component={AddRecipe} />
       <Footer />
       </div>
     )

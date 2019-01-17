@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Preview extends Component{
 
@@ -10,6 +11,7 @@ class Preview extends Component{
           <div id="ingredients" ></div>
           <div id="direction" style={{marginTop:"1em"}}></div>
         </div>
+        <Link to="/addrecipe" className="btn">Add new recipe</Link>
       </div>
     )
   }

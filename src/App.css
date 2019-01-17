@@ -28,11 +28,12 @@ a{
 }
 header{
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
   font-size: 1.5em;
   color: #218F76;
   font-weight: bolder;
   font-style: italic;
+  padding-top: 10px;
 }
 .innerContainer{
   border-radius: 5px;
@@ -55,8 +56,8 @@ header{
 .recipeBox ul li:hover{
 cursor: pointer;
 background: #DAE0E2;
+text-decoration: underline;
 }
-
 .previewBox h2{
   padding: 10px;
   font-weight: bold;
@@ -65,8 +66,24 @@ background: #DAE0E2;
   background: #fff;
   border-radius: 5px;
   padding: 15px;
-  height: 40vh;
+  height: 35vh;
   overflow-y: auto;
+}
+.btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #218F76;
+  display: inline-block;
+  padding: 5px 15px;
+  margin-top: 5px;
+  color: #fff;
+  font-weight: bolder;
+}
+.btn:hover{
+  color:#218F76;
+  background: #fff;
+  border:1px solid #218F76;
+  cursor: pointer;
 }
 footer{
   text-align: center;
@@ -78,4 +95,24 @@ footer{
   padding:15px;
   position: absolute;
   bottom: 0vh;
+}
+
+
+/***********MODAL CSS***********/
+.modal{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left:0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modalContainer{
+  width: 60vh;
+  position: relative;
+  margin: 30vh auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
 }
