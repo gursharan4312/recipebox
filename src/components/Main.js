@@ -42,15 +42,19 @@ constructor(){
     document.getElementById('direction').innerHTML = list;
   }
 
-  showPreview = (id)=>(
-      document.getElementById('recipeName').innerHTML = this.state.recipes[id-1].name,
-      this.displayIngredients(id),
+  showPreview = (id)=>{
+      document.getElementById('recipeName').innerHTML = this.state.recipes[id-1].name;
+      this.displayIngredients(id);
       this.displaydirection(id)
-  )
+  }
+  addRecipe = (recipe)=>{
+      console.log(recipe);
+      recipe.id = this.state.recipes.length;
+      this.setState({recipes:[...this.state.recipes,recipe]});
+  }
   componentDidMount(){
     this.showPreview(1);
   }
-
   render(){
     return(
       <div className="container">
@@ -63,7 +67,7 @@ constructor(){
         </React.Fragment>
       )}/>
       </div>
-      <Route path="/addrecipe" component={AddRecipe} />
+      <Route path="/addrecipe" render={(props)=>( <AddRecipe addRecipe={this.addRecipe} /> )} />
       <Footer />
       </div>
     )

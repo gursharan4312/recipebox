@@ -6,7 +6,7 @@ class Preview extends Component{
   render(){
     return(
       <div className="previewBox innerContainer">
-        <div><h2 id="recipeName"></h2></div>
+        <div><h2 id="recipeName">Heding</h2></div>
         <div className="content">
           <div id="ingredients" ></div>
           <div id="direction" style={{marginTop:"1em"}}></div>
