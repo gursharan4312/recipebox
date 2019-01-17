@@ -7,8 +7,8 @@ class Preview extends Component{
       <div className="previewBox innerContainer">
         <div><h2 id="recipeName"></h2></div>
         <div className="content">
-          <div id="ingredients"></div>
-          <div id="description"></div>
+          <div id="ingredients" ></div>
+          <div id="description" style={{marginTop:"1em"}}></div>
         </div>
       </div>
     )
