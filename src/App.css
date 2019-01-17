@@ -112,7 +112,19 @@ footer{
   position: relative;
   margin: 8vh auto;
   background: #fff;
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 10px;
   text-align: center;
+}
+.modalContainer textarea{
+  padding: 10px;
+}
+.modalContainer textarea:focus{
+  box-shadow: 0 0 30px #218F76;
+}
+.modalContainer input:focus{
+  box-shadow: 0 0 30px #218F76;
+}
+.modalContainer label{
+  font-weight: bolder;
 }

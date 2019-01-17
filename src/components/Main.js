@@ -47,14 +47,18 @@ constructor(){
       this.displayIngredients(id);
       this.displaydirection(id)
   }
+
   addRecipe = (recipe)=>{
       console.log(recipe);
-      recipe.id = this.state.recipes.length;
+      recipe.id = this.state.recipes.length+1;
+      
       this.setState({recipes:[...this.state.recipes,recipe]});
   }
+
   componentDidMount(){
     this.showPreview(1);
   }
+
   render(){
     return(
       <div className="container">
@@ -67,11 +71,12 @@ constructor(){
         </React.Fragment>
       )}/>
       </div>
-      <Route path="/addrecipe" render={(props)=>( <AddRecipe addRecipe={this.addRecipe} /> )} />
+      <Route path="/addrecipe" render={(props)=>(<AddRecipe addRecipe={this.addRecipe} />)} />
       <Footer />
       </div>
     )
   }
+
 }
 
 export default Main;
