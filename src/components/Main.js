@@ -47,6 +47,9 @@ constructor(){
       this.displayIngredients(id),
       this.displaydirection(id)
   )
+  componentDidMount(){
+    this.showPreview(1);
+  }
   render(){
     return(
       <div className="container">
