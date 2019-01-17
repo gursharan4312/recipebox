@@ -16,39 +16,40 @@ constructor(){
         id:1,
         name:"Easy Choclate pie",
         ingredients:["first I1","second I1",'third I1'],
-        description:["first D1","second D1",'third D1']
+        direction:["first D1","second D1",'third D1']
       },
       {
         id:2,
         name:"Easy Choclate pie2",
         ingredients:["first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third',"first","second",'third'],
-        description:["first","second",'third']
+        direction:["first","second",'third']
       }
     ]
   }
 }
 
   displayIngredients = (id)=>{
-    var list="<h3>Ingredients</h3>";
+    var list="<h3>Ingredients:</h3>";
     var array = this.state.recipes[id-1].ingredients;
     array.map((l)=>(list += "<li>"+l+"</li>"))
     document.getElementById('ingredients').innerHTML = list;
   }
 
-  displayDescription = (id)=>{
-    var list="<h3>Description</h3>";
-    var array = this.state.recipes[id-1].description;
+  displaydirection = (id)=>{
+    var list="<h3>Directions:</h3>";
+    var array = this.state.recipes[id-1].direction;
     array.map((l)=>(list += "<li>"+l+"</li>"))
-    document.getElementById('description').innerHTML = list;
+    document.getElementById('direction').innerHTML = list;
   }
 
   showPreview = (id)=>(
       document.getElementById('recipeName').innerHTML = this.state.recipes[id-1].name,
       this.displayIngredients(id),
-      this.displayDescription(id)
+      this.displaydirection(id)
   )
   render(){
     return(
+      <div className="container">
       <div className="main">
       <Header />
       <Route path="/" render={()=>(
@@ -58,6 +59,8 @@ constructor(){
         </React.Fragment>
       )}/>
       <Route path="/addrecipe" component={AddRecipe} />
+
+      </div>
       <Footer />
       </div>
     )

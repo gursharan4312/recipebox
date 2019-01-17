@@ -7,23 +7,33 @@ body{
   font-family:Arial, Helvertica, sans-serif;
   line-height:1.4;
   height: 100%;
+  background: url('./components/images/tiny-squares.png');
 }
 a{
   color:#333;
   text-decoration: none;
 }
-.main{
+.app{
   height: 100vh;
+}
+.main{
+  width: 71%;
+  max-width: 730px;
+  background: #fff;
+  margin:0 auto;
+  padding-bottom: 10px;
+  background: #555;
+  border-radius: 10px;
 }
 header{
   text-align: center;
-  padding-top: 3em;
+  margin-top: 3em;
   font-size: 1.5em;
+  color: #f1f1f1;
 }
 .innerContainer{
   border-radius: 5px;
   background: #8395A7;
-  width: 70%;
   max-width: 700px;
   margin: 1em auto;
   padding: 10px;
