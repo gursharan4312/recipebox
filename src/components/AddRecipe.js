@@ -6,7 +6,7 @@ class AddRecipe extends Component{
     var arr =[];
     var lastPos=0;
     for(var i=0;i<=text.length;i++){
-      if(text.charCodeAt(i)===92||i===text.length){
+      if(text.charCodeAt(i)===92||(i===text.length&&text.charCodeAt(i-1)!=92)){
         arr = [...arr,text.substring(lastPos,i)];
         lastPos = i+1;
       }
@@ -15,13 +15,22 @@ class AddRecipe extends Component{
   }
 onSubmit = (e)=>{
   e.preventDefault();
-  var recipe = {
-    id:0,
-    name:document.getElementById('name').value,
-    ingredients:this.filterText(document.getElementById('ingredientInput').value),
-    direction:this.filterText(document.getElementById('directionInput').value)
+  if(document.getElementById('name').value!=""||document.getElementById('ingredientInput').value!=""||document.getElementById('directionInput').value!=""){
+    var recipe = {
+      id:0,
+      name:document.getElementById('name').value,
+      ingredients:this.filterText(document.getElementById('ingredientInput').value),
+      direction:this.filterText(document.getElementById('directionInput').value)
+    }
+    this.props.addRecipe(recipe);
+    alert("Recipe added");
+    return null;
+  }else{
+    alert("Add required information");
   }
-  this.props.addRecipe(recipe);
+  document.getElementById('name').value="";
+  document.getElementById('ingredientInput').value="";
+  document.getElementById('directionInput').value="";
 }
   render(){
     return(

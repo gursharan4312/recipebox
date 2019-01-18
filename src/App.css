@@ -19,6 +19,7 @@ a{
 .main{
   width: 71%;
   max-width: 730px;
+  height: 85vh;
   background: #fff;
   margin:0 auto;
   padding-bottom: 10px;
@@ -66,7 +67,7 @@ text-decoration: underline;
   background: #fff;
   border-radius: 5px;
   padding: 15px;
-  height: 35vh;
+  height: 30vh;
   overflow-y: auto;
 }
 .previewBox li{
